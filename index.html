@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <title>Kababjees Restaurant</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <div class="header-content">
+          <h1>🧑‍🍳 Kababjees Restaurant</h1>
+          <button id="menuToggle">View Menu</button>
+        </div>
+      </header>
+
+      <main>
+        <div class="chat-container">
+          <div id="chatMessages" class="chat-messages"></div>
+          <form id="chatForm" class="chat-input">
+            <input
+              type="text"
+              id="messageInput"
+              placeholder="Type your message..."
+            />
+            <button type="submit">Send</button>
+          </form>
+        </div>
+
+        <div id="menuPanel" class="menu-panel hidden">
+          <div class="menu-content"></div>
+        </div>
+      </main>
+
+      <div id="orderModal" class="modal hidden">
+        <div class="modal-content">
+          <h2>Order Summary</h2>
+          <div id="orderSummary"></div>
+          <div class="order-total"></div>
+          <div class="modal-buttons">
+            <button class="btn-dine-in">Dine In</button>
+            <button class="btn-takeaway">Takeaway</button>
+            <button class="btn-cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="menu.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
